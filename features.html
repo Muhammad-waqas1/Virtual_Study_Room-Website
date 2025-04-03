@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Study Room - Powerful Features</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="assets/icons/favicon.ico">
+</head>
+<body class="features-background">
+    <!-- Navigation (Same as previous pages) -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="Study Room Logo" height="45" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stats">Stats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="study-room.html">Study Room</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="features-hero vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row glass-card p-5 animate-fade-in">
+                <div class="col-12 text-center">
+                    <h1 class="display-2 text-light mb-4">Revolutionary Study Features</h1>
+                    <p class="lead text-light opacity-75">Discover tools designed to transform your learning experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Feature Categories Tabs -->
+                <div class="col-12">
+                    <div class="glass-card p-4 mb-5">
+                        <ul class="nav nav-pills justify-content-center" id="featureTabs">
+                            <li class="nav-item">
+                                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#coreFeatures">
+                                    Core Features
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#collabFeatures">
+                                    Collaboration
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#productivityTools">
+                                    Productivity
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Core Features -->
+                    <div class="tab-pane fade show active" id="coreFeatures">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="glass-card feature-card h-100 p-4">
+                                    <div class="feature-icon bg-primary mb-3">
+                                        <i class="fas fa-brain-circuit fa-3x"></i>
+                                    </div>
+                                    <h3 class="text-light mb-3">AI-Powered Insights</h3>
+                                    <p class="text-light opacity-75">Real-time study pattern analysis and personalized recommendations</p>
+                                    <ul class="feature-list">
+                                        <li>Smart progress tracking</li>
+                                        <li>Automated study plans</li>
+                                        <li>Focus time optimization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Add 5 more core feature cards -->
+                        </div>
+                    </div>
+
+                    <!-- Collaboration Features -->
+                    <div class="tab-pane fade" id="collabFeatures">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="glass-card feature-card h-100 p-4">
+                                    <div class="feature-icon bg-success mb-3">
+                                        <i class="fas fa-users fa-3x"></i>
+                                    </div>
+                                    <h3 class="text-light mb-3">Real-Time Collaboration</h3>
+                                    <p class="text-light opacity-75">Seamless group study experience with multiple interactive tools</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="feature-highlight">
+                                                <i class="fas fa-comments"></i>
+                                                <h5>Group Chat</h5>
+                                                <p>Public and private channels with file sharing</p>
+                                            </div>
+                                        </div>
+                                        <!-- Add more collaboration sub-features -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more collaboration feature cards -->
+                        </div>
+                    </div>
+
+                    <!-- Productivity Tools -->
+                    <div class="tab-pane fade" id="productivityTools">
+                        <!-- Productivity features content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center text-light mb-5 display-4">Feature Comparison</h2>
+            <div class="glass-card p-4">
+                <table class="table feature-comparison">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Basic</th>
+                            <th>Pro</th>
+                            <th>Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Collaborative Whiteboards</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <!-- Add more comparison rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="glass-card p-4">
+                        <h3 class="text-light mb-4">System Architecture</h3>
+                        <div class="tech-specs">
+                            <div class="spec-item">
+                                <h5>Real-Time Engine</h5>
+                                <p>WebSocket-based communication layer</p>
+                                <div class="spec-progress">
+                                    <div class="progress-bar" style="width: 100%">Low Latency</div>
+                                </div>
+                            </div>
+                            <!-- Add more spec items -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="glass-card p-4">
+                        <h3 class="text-light mb-4">Security Features</h3>
+                        <div class="security-features">
+                            <div class="security-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <h5>End-to-End Encryption</h5>
+                                <p>AES-256 encryption for all communications</p>
+                            </div>
+                            <!-- Add more security items -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center text-light mb-5 display-4">User Experiences</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="glass-card p-4 testimonial-card">
+                        <div class="user-header">
+                            <img src="assets/images/user1.jpg" class="user-avatar">
+                            <div class="user-info">
+                                <h5>Sarah Johnson</h5>
+                                <p>Computer Science Student</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"This platform transformed my study routine completely..."</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more testimonials -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center text-light mb-5 display-4">Frequently Asked Questions</h2>
+            <div class="accordion glass-accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            How does real-time collaboration work?
+                        </button>
+                    </h3>
+                    <div id="faq1" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            Our real-time collaboration uses WebSocket technology...
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more FAQ items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent with other pages) -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

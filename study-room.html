@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Study Room - Focus Zone</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="assets/icons/favicon.ico">
+</head>
+
+<body class="study-room-background">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="Study Room Logo" height="45">
+            </a>
+            <div class="d-flex align-items-center">
+                <div class="live-status me-3">
+                    <span class="badge bg-danger pulse-animation">Live</span>
+                    <span class="text-light">24 Active Users</span>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="study-room.html">Study Room</a></li>
+                    <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Study Interface -->
+    <main class="container study-container">
+        <div class="row g-4">
+            <!-- Left Column: Tools -->
+            <div class="col-lg-3">
+                <!-- Enhanced Timer Card -->
+                <div class="glass-card p-4 mb-4">
+                    <h3 class="text-light mb-4"><i class="fas fa-clock me-2"></i>Study Timer</h3>
+                    <div class="timer-display display-3 text-center text-light mb-4">25:00</div>
+                    <div class="d-grid gap-2 timer-controls">
+                        <button class="btn btn-success btn-lg" id="startTimer">
+                            <i class="fas fa-play"></i> Start
+                        </button>
+                        <button class="btn btn-warning btn-lg" id="pauseTimer" disabled>
+                            <i class="fas fa-pause"></i> Pause
+                        </button>
+                        <div class="btn-group">
+                            <button class="btn btn-outline-light" data-minutes="25">25</button>
+                            <button class="btn btn-outline-light" data-minutes="50">50</button>
+                            <button class="btn btn-outline-light" data-minutes="15">15</button>
+                        </div>
+                        <button class="btn btn-danger" id="resetTimer">
+                            <i class="fas fa-undo"></i> Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Task List -->
+                <div class="glass-card p-4">
+                    <h3 class="text-light mb-4"><i class="fas fa-tasks me-2"></i>Study Tasks</h3>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control glass-input" placeholder="Add new task..."
+                            id="taskInput">
+                        <button class="btn btn-primary" onclick="addTask()">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <ul class="list-group task-list" id="taskList"></ul>
+                </div>
+            </div>
+
+            <!-- Center Column: Workspace -->
+            <div class="col-lg-6">
+                <!-- Enhanced Notes Editor with Download -->
+                <div class="glass-card p-4">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h3 class="text-light"><i class="fas fa-file-alt me-2"></i>Study Notes</h3>
+                        <div>
+                            <button class="btn btn-sm btn-primary me-2" id="downloadNotes">
+                                <i class="fas fa-download"></i> PDF
+                            </button>
+                            <button class="btn btn-sm btn-success" id="saveNotes">
+                                <i class="fas fa-save"></i> Save
+                            </button>
+                        </div>
+                    </div>
+                    <textarea class="form-control glass-input collaborative-editor" rows="18"
+                        placeholder="Start taking notes..." id="mainEditor"></textarea>
+                </div>
+
+                <!-- New Video Learning Section -->
+                <!-- <div class="glass-card mt-4 p-4">
+                    <h3 class="text-light mb-4"><i class="fas fa-video me-2"></i>Video Learning</h3>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control glass-input" placeholder="Search educational videos..."
+                            id="videoSearch">
+                        <button class="btn btn-primary" id="searchVideos">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="row g-3" id="videoResults"></div>
+                </div> -->
+
+            </div>
+
+            <!-- Right Column: Chat & Stats -->
+            <div class="col-lg-3">
+                <!-- Study Stats -->
+                <div class="glass-card p-4 mb-4">
+                    <h3 class="text-light mb-4"><i class="fas fa-chart-pie me-2"></i>Session Stats</h3>
+                    <div class="study-stats">
+                        <div class="stat-item d-flex justify-content-between mb-3">
+                            <span class="text-light">Focus Time:</span>
+                            <span class="text-light">1h 25m</span>
+                        </div>
+                        <div class="stat-item d-flex justify-content-between mb-3">
+                            <span class="text-light">Tasks Completed:</span>
+                            <span class="text-light">3/5</span>
+                        </div>
+                        <div class="stat-item d-flex justify-content-between mb-3">
+                            <span class="text-light">Productivity Score:</span>
+                            <span class="text-light">82%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Working Chat Interface -->
+                <div class="glass-card p-4">
+                    <h3 class="text-light mb-4"><i class="fas fa-comments me-2"></i>Study Chat</h3>
+                    <div class="chat-messages mb-3" id="chatMessages"></div>
+                    <div class="input-group">
+                        <input type="text" class="form-control glass-input" placeholder="Type message..."
+                            id="chatInput">
+                        <button class="btn btn-primary" id="sendMessage">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Live Class Section -->
+         <!-- New Video Learning Section -->
+         <div class="glass-card mt-4 p-4">
+            <h3 class="text-light mb-4"><i class="fas fa-video me-2"></i>Video Learning</h3>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control glass-input" placeholder="Search educational videos..."
+                    id="videoSearch">
+                <button class="btn btn-primary" id="searchVideos">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="row g-3" id="videoResults"></div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="glass-card p-4">
+                    <h3 class="text-light mb-4"><i class="fas fa-chalkboard-teacher me-2"></i>Live Classes</h3>
+                    <div class="row g-4" id="liveClasses">
+                        <!-- Live class cards will be dynamically populated -->
+                        <div class="col-md-4">
+                            <div class="glass-card p-3 live-class">
+                                <div class="badge bg-danger mb-2">Live Now</div>
+                                <h5 class="text-light">Advanced Calculus</h5>
+                                <p class="text-light opacity-75">With Prof. Smith</p>
+                                <button class="btn btn-sm btn-primary w-100">
+                                    Join Class
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="glass-footer py-4 mt-5">
+        <div class="container text-center">
+            <p class="text-light mb-0">&copy; 2023 Virtual Study Room. Stay focused, achieve more.</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>
