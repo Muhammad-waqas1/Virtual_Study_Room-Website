@@ -1,10 +1,10 @@
 /* main.css */
-:root {
-    --primary-color: #6c63ff;
-    --hero-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-}
+    :root {
+        --primary-color: #6c63ff;
+        --hero-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --glass-bg: rgba(255, 255, 255, 0.1);
+        --glass-border: rgba(255, 255, 255, 0.2);
+    }
 
 .virtual-study-room-logo {
     font-family: sans-serif; /* Or specify a specific sans-serif font */
@@ -135,13 +135,13 @@
 }
 
 .glass-input {
-    background: rgba(255, 255, 255, 0.05) !important;
+    background: rgba(219, 199, 255, 0.452) !important;
     border: 1px solid rgba(255, 255, 255, 0.15) !important;
     color: white !important;
 }
 
 .glass-input::placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgba(255, 255, 255, 0.822) !important;
 }
 
 .task-list {
@@ -174,7 +174,7 @@
 
 .message-user {
     font-weight: bold;
-    color: #6c63ff;
+    color: #2f2c5e;
 }
 .message-content {
     /* font-weight: bold; */
@@ -258,7 +258,7 @@
 
 
 .features-background {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    background: linear-gradient(rgba(0,0,0,0.2), var(--hero-gradient));
 }
 
 .feature-card {
@@ -301,7 +301,7 @@
     content: '✓';
     position: absolute;
     left: 0;
-    color: #6c63ff;
+    color: #ffca1c;
 }
 
 .glass-accordion .accordion-item {
@@ -343,4 +343,218 @@
 .security-item:hover {
     background: rgba(255,255,255,0.05);
     transform: translateX(10px);
+}
+
+
+
+/* Override features-specific styles */
+/* .features-background {
+    background: linear-gradient(rgba(0,0,0,0.2), var(--hero-gradient));
+    min-height: 100vh;
+}
+
+.features-hero {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+} */
+
+/* Update feature cards with homepage glass style */
+.feature-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+}
+
+/* Update testimonial cards */
+.testimonial-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+}
+
+/* Update accordion style */
+.glass-accordion .accordion-item {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+}
+
+/* Update progress bars */
+.spec-progress .progress-bar {
+    background: var(--primary-color);
+}
+
+/* Update security icons */
+.security-item {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+}
+
+/* Update feature tabs */
+.nav-pills .nav-link.active {
+    background: var(--primary-color) !important;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Update rating stars */
+.rating .fa-star {
+    color: yellow;
+}
+
+
+
+
+
+
+/* some Nav things */
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: black;
+}
+
+
+
+.navbar-nav{
+    font-size: 1.1em;
+}
+
+
+
+
+
+
+
+
+
+
+/* ######################################  ABOUT Page ################################################ */
+
+/* Team Section Styling */
+.team-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.team-photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.1);
+}
+
+.value-icon {
+    color: var(--primary-color);
+    text-shadow: 0 0 15px rgba(108,99,255,0.3);
+}
+
+.social-links a {
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* About Hero Section */
+/* .about-hero {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                var(--hero-gradient);
+} */
+
+
+
+
+
+
+
+/* #######################################   Contact Page    #################################   */
+
+
+
+
+
+
+
+.contact-hero {
+    background: linear-gradient(rgba(0,0,0,0.2), var(--hero-gradient));
+}
+
+.glass-input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--glass-border) !important;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.glass-input:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 0 15px rgba(108, 99, 255, 0.2);
+}
+
+.info-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Map Container */
+.glass-card iframe {
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+}
+
+/* Form Success Message */
+#formSuccess {
+    display: none;
+    background: rgba(76, 175, 80, 0.15);
+    border: 1px solid #4CAF50;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+
+
+/* Legal Pages */
+.policy-hero {
+    background: linear-gradient(rgba(0,0,0,0.2), var(--hero-gradient));
+}
+
+.legal-content h2 {
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.legal-content ul {
+    padding-left: 1.5rem;
+}
+
+.legal-content li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.legal-content li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
 }

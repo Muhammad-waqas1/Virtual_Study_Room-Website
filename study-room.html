@@ -12,27 +12,24 @@
     <link rel="icon" href="assets/icons/favicon.ico">
 </head>
 
-<body class="study-room-background">
+<body class="hero-background">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top glass-nav">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo.png" alt="Study Room Logo" height="45">
+            <a class="navbar-brand" href="/">
+                <!-- <img src="assets/images/logo.png" alt="Study Room Logo" height="45" class="d-inline-block align-text-top"> -->
+                <h1 class="virtual-study-room-logo">Virtual Study Room</h1>
             </a>
-            <div class="d-flex align-items-center">
-                <div class="live-status me-3">
-                    <span class="badge bg-danger pulse-animation">Live</span>
-                    <span class="text-light">24 Active Users</span>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
                     <li class="nav-item"><a class="nav-link active" href="study-room.html">Study Room</a></li>
-                    <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
                 </ul>
             </div>
@@ -98,19 +95,6 @@
                     <textarea class="form-control glass-input collaborative-editor" rows="18"
                         placeholder="Start taking notes..." id="mainEditor"></textarea>
                 </div>
-
-                <!-- New Video Learning Section -->
-                <!-- <div class="glass-card mt-4 p-4">
-                    <h3 class="text-light mb-4"><i class="fas fa-video me-2"></i>Video Learning</h3>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control glass-input" placeholder="Search educational videos..."
-                            id="videoSearch">
-                        <button class="btn btn-primary" id="searchVideos">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                    <div class="row g-3" id="videoResults"></div>
-                </div> -->
 
             </div>
 
@@ -190,12 +174,48 @@
 
 
     <!-- Footer -->
-    <footer class="glass-footer py-4 mt-5">
-        <div class="container text-center">
-            <p class="text-light mb-0">&copy; 2023 Virtual Study Room. Stay focused, achieve more.</p>
+    <footer class="glass-footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <!-- <img src="assets/images/logo.png" alt="Logo" height="40" class="mb-3"> -->
+                    <h1 class="virtual-study-room-logo">Virtual Study Room</h1>
+                    <p class="text-light opacity-75">Empowering students worldwide through collaborative learning and
+                        advanced study technologies.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="text-light mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-light footer-link">Home</a></li>
+                        <li><a href="features.html" class="text-light footer-link">Features</a></li>
+                        <li><a href="study-room.html" class="text-light footer-link">Study Room</a></li>
+                        <li><a href="about.html" class="text-light footer-link">About</a></li>
+                        <li><a href="contact.html" class="text-light footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="text-light mb-3">Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="privacy-policy.html" class="text-light footer-link">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="text-light footer-link">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html" class="text-light footer-link">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="text-light mb-3">Connect</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-discord fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="text-light my-5 opacity-25">
+            <p class="text-center text-light mb-0">&copy; 2023 Virtual Study Room. All rights reserved.</p>
         </div>
     </footer>
-
+    
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>

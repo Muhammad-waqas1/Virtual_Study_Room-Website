@@ -193,7 +193,7 @@ function addTask() {
 
 
 
-// ################################################             Feature Tabs Interaction
+// ################################################       Feature Tabs Interaction
 
 
 
@@ -250,4 +250,41 @@ document.querySelectorAll('.accordion-button').forEach(button => {
     button.addEventListener('click', () => {
         button.classList.toggle('active');
     });
+});
+
+
+
+
+
+
+
+
+/* #######################################   Contact Form    #################################   */
+
+
+
+
+// Contact Form Handling
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Show success message
+    const successMsg = document.createElement('div');
+    successMsg.id = 'formSuccess';
+    successMsg.innerHTML = `
+        <div class="d-flex align-items-center">
+            <i class="fas fa-check-circle me-2"></i>
+            <span class="text-light">Message sent successfully!</span>
+        </div>
+    `;
+    this.parentNode.insertBefore(successMsg, this.nextSibling);
+    
+    // Reset form
+    this.reset();
+    
+    // Hide message after 5 seconds
+    setTimeout(() => {
+        successMsg.style.opacity = '0';
+        setTimeout(() => successMsg.remove(), 300);
+    }, 5000);
 });
